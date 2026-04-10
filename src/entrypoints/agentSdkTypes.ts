@@ -30,6 +30,12 @@ export type { Settings } from './sdk/settingsTypes.generated.js'
 // Re-export tool types (all marked @internal until SDK API stabilizes)
 export * from './sdk/toolTypes.js'
 
+// Inferred types from schemas (not generated into coreTypes)
+import type { z } from 'zod/v4'
+import type { SDKAssistantMessageErrorSchema, SDKStatusSchema } from './sdk/coreSchemas.js'
+export type SDKAssistantMessageError = z.infer<ReturnType<typeof SDKAssistantMessageErrorSchema>>
+export type SDKStatus = z.infer<ReturnType<typeof SDKStatusSchema>>
+
 // ============================================================================
 // Functions
 // ============================================================================

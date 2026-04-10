@@ -106,10 +106,10 @@
     "zod-to-json-schema": "*"
   },
   "devDependencies": {
-    "@types/node": "*",
+    "@types/node": "^25.6.0",
     "@types/react": "*",
     "@types/ws": "*",
-    "bun-types": "*",
+    "bun-types": "^1.3.12",
     "typescript": "*"
   },
   "bin": {
